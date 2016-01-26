@@ -1,0 +1,3 @@
+---
+- name: Parse Xresources
+  shell: xrdb -merge ~/.Xresources

@@ -1,0 +1,4 @@
+---
+
+- name: reload plugin
+  shell: vim +PluginInstall +qall

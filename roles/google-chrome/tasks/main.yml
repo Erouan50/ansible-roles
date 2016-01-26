@@ -1,0 +1,13 @@
+---
+
+- name: Copy the Google Chrome repository
+  sudo: yes
+  copy:
+    src: google-chrome.repo
+    dest: /etc/yum.repos.d/google-chrome.repo
+
+- name: Install Google Chrome
+  sudo: yes
+  dnf:
+    name: google-chrome-stable
+    state: latest

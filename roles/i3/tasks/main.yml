@@ -1,0 +1,15 @@
+---
+
+- name: Install i3 Windows Manager and its dependencies
+  sudo: yes
+  dnf:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - i3
+    - i3status
+
+- name: Copy the i3 config file
+  copy:
+    src: config
+    dest: ~/.i3/config

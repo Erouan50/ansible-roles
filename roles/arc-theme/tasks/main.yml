@@ -1,0 +1,41 @@
+---
+
+- name: Install Moka Project repository
+  sudo: yes
+  get_url:
+    url: http://download.opensuse.org/repositories/home:snwh:moka-project/Fedora_22/home:snwh:moka-project.repo
+    dest: /etc/yum.repos.d/home:snwh:moka-project.repo 
+
+- name: Install the Mako Icone
+  sudo: yes
+  dnf:
+    name: moka-icon-theme
+    state: latest
+
+- name: Install the Arc Theme repository
+  sudo: yes
+  get_url: 
+    url: http://download.opensuse.org/repositories/home:Horst3180/Fedora_23/home:Horst3180.repo
+    dest: /etc/yum.repos.d/home:Horst3180.repo
+
+- name: Install the Arc theme
+  sudo: yes
+  dnf:
+    name: arc-theme
+    state: latest
+
+- name: Copy the gtk 2.0 configuration
+  copy:
+   src: gtkrc-2.0
+   dest: ~/.gtkrc-2.0
+
+- name: Ensure gtk 3.0 config folder is present
+  file:
+    path: ~/.config/gtk-3.0
+    state: directory
+    recurse: yes
+
+- name: Copy the gtk 3.0 configuration
+  copy:
+    src: settings.ini
+    dest: ~/.config/gtk-3.0/settings.ini

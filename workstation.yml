@@ -1,0 +1,17 @@
+- hosts: localhost
+  connection: local
+  pre_tasks:
+    - name: Install commons packages
+      sudo: yes
+      dnf:
+        name: "{{item}}"
+        state: latest
+      with_items:
+        - libselinux-python
+        - network-manager-applet
+  roles:
+    - i3
+    - urxvt
+    - arc-theme
+    - vim
+    - google-chrome
