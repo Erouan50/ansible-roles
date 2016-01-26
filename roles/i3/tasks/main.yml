@@ -9,6 +9,11 @@
     - i3
     - i3status
 
+- name: Ensure i3 config folder exist
+  file:
+    path: ~/.i3
+    state: directory
+
 - name: Copy the i3 config file
   copy:
     src: config

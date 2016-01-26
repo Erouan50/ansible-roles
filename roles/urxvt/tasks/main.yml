@@ -1,9 +1,21 @@
 ---
+
+- name: Install urxvt
+  sudo: yes
+  dnf:
+    name: rxvt-unicode
+
 - name: Install xsel as clipboard manager
   sudo: yes
   dnf:
     name: xsel
     state: latest
+
+- name: Ensure perl extension folder exist
+  sudo: yes
+  file:
+    path: /usr/lib64/urxvt/perl
+    state: directory
 
 - name: Copy the clipboard perl extension
   sudo: yes

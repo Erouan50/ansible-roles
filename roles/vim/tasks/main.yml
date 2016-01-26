@@ -1,5 +1,10 @@
 ---
 
+- name: Install vim
+  sudo: yes
+  dnf:
+    name: vim
+
 - name: Set up Vundle plugin
   git:
     repo: https://github.com/VundleVim/Vundle.vim.git
