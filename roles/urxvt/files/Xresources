@@ -5,7 +5,6 @@ URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: false
 URxvt*skipScroll: true
 URxvt*scrollBar: false
-URxvt*visualBell: true
 !
 URxvt*saveLines:  0
 
