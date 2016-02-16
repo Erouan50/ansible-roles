@@ -19,3 +19,8 @@
   copy:
     src: config
     dest: ~/.i3/config
+
+- name: Copy the i3status configuration
+  copy:
+    src: i3status.conf
+    dest: ~/.i3status.conf
