@@ -17,7 +17,7 @@ Xft.hintstyle:  hintfull
 
 ! Font configuration
 
-URxvt.font: xft:Terminus:pixelsize=8
+URxvt.font: xft:Monospace:pixelsize=11
 
 ! Color configuration
 ! Solarized color scheme for the X Window System

@@ -3,7 +3,7 @@
 - name: Install Moka Project repository
   sudo: yes
   get_url:
-    url: http://download.opensuse.org/repositories/home:snwh:moka-project/Fedora_22/home:snwh:moka-project.repo
+    url: http://download.opensuse.org/repositories/home:snwh:moka/Fedora_25/home:snwh:moka.repo
     dest: /etc/yum.repos.d/home:snwh:moka-project.repo 
 
 - name: Install the Mako Icone
@@ -15,14 +15,13 @@
 - name: Install the Arc Theme repository
   sudo: yes
   get_url: 
-    url: http://download.opensuse.org/repositories/home:Horst3180/Fedora_23/home:Horst3180.repo
+    url: http://download.opensuse.org/repositories/home:Horst3180/Fedora_25/home:Horst3180.repo
     dest: /etc/yum.repos.d/home:Horst3180.repo
 
 - name: Install the Arc theme
   sudo: yes
   dnf:
     name: arc-theme
-    state: latest
 
 - name: Copy the gtk 2.0 configuration
   copy:

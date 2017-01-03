@@ -206,6 +206,17 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+exec xrandr --output HDMI1 --auto --right-of LVDS1
 exec --no-startup-id nm-applet
+
+workspace 1 output LVDS1
+workspace 2 output LVDS1
+workspace 3 output LVDS1
+workspace 4 output HDMI1
+workspace 5 output HDMI1
+workspace 6 output HDMI1
+
+bindsym $mod+m move workspace to output left
+bindsym $mod+Shift+m move workspace to output right
 
 # vim:filetype=i3

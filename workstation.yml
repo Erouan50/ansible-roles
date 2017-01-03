@@ -9,6 +9,7 @@
       with_items:
         - libselinux-python
         - network-manager-applet
+        - arandr
   roles:
     - i3
     - urxvt
