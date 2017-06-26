@@ -9,18 +9,19 @@
     - i3
     - i3status
     - i3lock
+    - scrot
 
 - name: Ensure i3 config folder exist
   file:
-    path: ~/.i3
+    path: /home/erouan/.i3
     state: directory
 
 - name: Copy the i3 config file
   copy:
     src: config
-    dest: ~/.i3/config
+    dest: /home/erouan/.i3/config
 
 - name: Copy the i3status configuration
   copy:
     src: i3status.conf
-    dest: ~/.i3status.conf
+    dest: /home/erouan/.i3status.conf

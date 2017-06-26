@@ -10,9 +10,11 @@
         - libselinux-python
         - network-manager-applet
         - arandr
+        - htop
   roles:
     - i3
     - urxvt
     - arc-theme
     - vim
     - google-chrome
+    - spotify

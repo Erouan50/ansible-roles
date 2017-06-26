@@ -1,0 +1,19 @@
+- name: Add Spotify repository
+  become: yes
+  yum_repository:
+    name: "fedora-spotify"
+    description: "negativo17 - Spotify"
+    baseurl: "https://negativo17.org/repos/spotify/fedora-$releasever/$basearch/"
+    skip_if_unavailable: "yes"
+    gpgkey: "https://negativo17.org/repos/RPM-GPG-KEY-slaanesh"
+    gpgcheck: "yes"
+
+- name: Install Spotify
+  become: yes
+  dnf:
+    name: spotify-client
+
+- name: Copy the Spotify's desktop entry
+  copy:
+    src: spotify.desktop
+    dest: ~/.local/share/applications/spotify.desktop

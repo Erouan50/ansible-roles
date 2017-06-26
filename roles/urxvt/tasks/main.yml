@@ -26,5 +26,5 @@
 - name: Copy Xresources config file for urxvt terminal
   copy:
     src: Xresources
-    dest: ~/.Xresources
+    dest: /home/erouan/.Xresources
   notify: Parse Xresources
