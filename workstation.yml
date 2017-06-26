@@ -2,7 +2,7 @@
   connection: local
   pre_tasks:
     - name: Install commons packages
-      sudo: yes
+      become: yes
       dnf:
         name: "{{item}}"
         state: latest
